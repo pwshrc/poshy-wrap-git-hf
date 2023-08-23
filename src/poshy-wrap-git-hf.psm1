@@ -7,6 +7,13 @@ if (-not (Test-Command git-hf)) {
     return
 }
 
+[string] $git_bin = $null
+if (Test-Command hub) {
+    $git_bin = "hub"
+} elseif (Test-Command git) {
+    $git_bin = "git"
+}
+
 function Invoke-GitHubflow {
     & $git_bin hf @args
 }
