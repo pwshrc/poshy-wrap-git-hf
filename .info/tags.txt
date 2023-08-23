@@ -1,0 +1,6 @@
+git
+git-hf
+git-hubflow
+hubflow
+poshy-wrap
+pwshrc
